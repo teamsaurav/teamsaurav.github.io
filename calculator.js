@@ -7,7 +7,7 @@ incentive=(Math.round((incentive+Number.EPSILON)*100)/100)+'   ('+slab+')';retur
 incentive=(Math.round((incentive+Number.EPSILON)*100)/100)+'   ('+slab+')';return incentive}}
 function validate(category,demo,revenue){var reg=/^\d+$/;if(category==="0"){var error="Please Select Campaign";return error}
 if(!reg.test(demo)){var error="Demos Catered Field is madatory and can only be Numeric";return error}
-if(!reg.test(revenue)){var error='';if($('#dropdown').val()==='6'){error='Number of Sales Field is madatory and can only a Whole Number'}else{error="Revenue Field is madatory and can only be a Whole Number"}
+if(!reg.test(revenue)){var error='';if($('#dropdown').val()==='6'){error='Number of Sales Field is madatory and can only be a Whole Number'}else{error="Revenue Field is madatory and can only be a Whole Number"}
 return error}
 return""}
 $('#dropdown').change(function(){var category=$('#dropdown').val();if(category==='6'){$('#revenue').attr('placeholder','Enter Number of Sales From Valid Demos')}else{$('#revenue').attr('placeholder','Enter #Revenue Done')}})
